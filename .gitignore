@@ -11,7 +11,11 @@
 # production
 /build
 
+# env
 .env
+
+# my note
+note.txt
 
 # misc
 .DS_Store
