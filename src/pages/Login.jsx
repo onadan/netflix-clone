@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import Background from "../components/Background";
 import "../scss/signin.scss";
 import { useMediaQuery } from "react-responsive";
-import { Link, useNavigate } from "react-router-dom";
-import { useEmail } from "../UserEmail";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const isNotMobile = useMediaQuery({ query: "(min-width: 700px)" });
-
-  const navigate = useNavigate();
-  const auth = useEmail();
-  const [email, setEmail] = useState(auth.email);
+  // eslint-disable-next-line
+  const [email, setEmail] = useState('');
 
   return (
     <>
@@ -24,7 +21,6 @@ const Login = () => {
               type="email"
               name="email"
               placeholder="Email address"
-              value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -33,7 +29,6 @@ const Login = () => {
             <button
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/home");
               }}
             >
               Sign In

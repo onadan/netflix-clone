@@ -4,12 +4,10 @@ import Login from "./pages/Login";
 import GetStarted from "./pages/GetStarted";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
-import { UserEmailProvider } from "./UserEmail";
 
 const App = () => {
   return (
     <>
-    <UserEmailProvider>
       <Navbar />
 
       <Routes>
@@ -19,7 +17,6 @@ const App = () => {
           <Route exact path="/home" element={<Home />} />
         
       </Routes>
-      </UserEmailProvider>
     </>
   );
 };
