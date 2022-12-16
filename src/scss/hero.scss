@@ -1,0 +1,120 @@
+@import "variables";
+
+.hero {
+  top: -100px;
+  height: 500px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  margin-bottom: 4rem;
+  &:after {
+    content: "";
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .hero_info {
+    overflow-x: hidden;
+    color: white;
+    max-width: 450px;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+    z-index: 1;
+    top: -10rem;
+    position: relative;
+    .hero_title {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+    .hero_desc {
+      margin: 1rem 0;
+      font-weight: 300;
+      line-height: 1.5rem;
+    }
+    .hero_btns {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .hero_btn {
+        background-color: $primary;
+        color: white;
+        border-radius: 0.7rem;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        box-shadow: 0 2px 5px rgb(255, 36, 36);
+      }
+    }
+    .hero_note {
+        color: $primary;
+        margin: 1.5rem 0;
+      }
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    top: -80px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    top: -60px;
+    height: 400px;
+    .hero_info {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      top: -5rem;
+      position: relative;
+      .hero_title {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+      }
+      .hero_desc {
+        margin: 1rem 0;
+        font-weight: 300;
+        line-height: 1.5rem;
+        max-width: 25rem;
+        padding-right: 10px;
+      }
+      .hero_btns {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .hero_btn {
+          background-color: $primary;
+          color: white;
+          border-radius: 0.7rem;
+          border: none;
+          padding: 0.8rem 2rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+          box-shadow: 0 2px 5px rgb(255, 36, 36);
+        }
+      }
+      
+    }
+  }
+}

@@ -8,6 +8,7 @@
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   overflow-x: hidden;
   color: white;
+  z-index: 10;
   .brand {
     color: $primary;
     font-weight: 700;

@@ -13,10 +13,10 @@ const Navbar = () => {
       setValue("Sign Up");
       setHref("/signup")
     }
-    if ((location.pathname === "/home") | location.pathname.includes("/home")) {
+    if ((location.pathname === "/home") || location.pathname.includes("/home")) {
       setValue("Sign Out");
     }
-    if ((location.pathname === "/" || location.pathname === "/signup") | location.pathname.includes("/home")) {
+    if ((location.pathname === "/" || location.pathname === "/signup")) {
       setValue("Sign In");
       setHref("/login")
     }

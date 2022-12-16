@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import GetStarted from "./pages/GetStarted";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
-import {UserEmailProvider} from "./UserEmail";
+import { UserEmailProvider } from "./UserEmail";
 
 const App = () => {
   return (
