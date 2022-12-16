@@ -1,30 +1,6 @@
 @import "variables";
 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.wrapper {
+.home_wrapper {
   min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
@@ -34,20 +10,25 @@
   padding: 1rem;
   .container {
     max-width: 40rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     header {
-      font-weight: 700;
+      text-align: center;
+      font-weight: 600;
       font-size: 3.2rem;
+      
     }
     .motto {
       font-weight: 500;
       font-size: 1.5rem;
-      margin: 0.2rem 0 1rem 0;
+      margin: 1rem 0 1.5rem;
     }
     .ctac {
       font-weight: 400;
       font-size: 1.2rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
     .input_wrapper {
       display: flex;
@@ -57,29 +38,31 @@
         padding: 0.8rem;
         outline: none;
         width: 30rem;
-        margin-bottom: 0.5rem;
         background-color: white;
-        border: none
+        border: none;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: black;
       }
       button {
-        margin-bottom: 0.5rem;
         padding: 0.5rem;
         background-color: $primary;
         border: none;
         color: white;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 1.5rem;
+        margin-bottom: 1rem;
       }
     }
   }
 }
 
 @media (max-width: 700px) {
-  .wrapper {
+  .home_wrapper {
     .container {
       header {
-        font-size: 2.5rem;
-        // max-width: 10rem;
+        font-size: 2.3rem;
+        max-width: 30rem;
       }
       .motto {
         font-size: 1.2rem;
@@ -87,7 +70,7 @@
       .ctac {
         font-size: 1rem;
       }
-      input{
+      input {
         background-color: white;
         max-width: 18rem;
       }
@@ -95,19 +78,14 @@
   }
 }
 
-// @media (max-width: 520px) {
-//   .wrapper {
-//     .container {
-//       header {
-//         font-size: 2.5rem;
-//         // max-width: 10rem;
-//       }
-//       .motto {
-//         font-size: 1.2rem;
-//       }
-//       .ctac {
-//         font-size: .8rem;
-//       }
-//     }
-//   }
-// }
+@media (max-width: 480px) {
+  .wrapper {
+    .container {
+      .input_wrapper {
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

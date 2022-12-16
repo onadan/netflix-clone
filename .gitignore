@@ -10,6 +10,8 @@
 
 # production
 /build
+#my_note
+note.txt 
 
 # misc
 .DS_Store

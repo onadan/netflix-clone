@@ -1,16 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Netflix Sans, Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
-  }
-  
-  @font-face {
-    font-family: 'MyWebFont';
-    src: url('../assets/fonts/NetflixSans-Regular.woff2') format('woff'), 
-         url('../assets/fonts/NetflixSans-Regular.otf') format('truetype');
-  }
-  
-  body {
-    overflow-x: hidden;
-  }
+@import "variables";
+@import "reset";
+
+@font-face {
+  font-family: "NetflixSans";
+  src: url("../assets/fonts/NetflixSans-Regular.woff2") format("woff"),
+    url("../assets/fonts/NetflixSans-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "NetflixSans";
+  src: url("../assets/fonts/NetflixSans-Bold.woff2") format("woff"),
+    url("../assets/fonts/NetflixSans-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NetflixSans";
+  src: url("../assets/fonts/NetflixSans-Medium.woff2") format("woff"),
+    url("../assets/fonts/NetflixSans-Medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "NetflixSans";
+  src: url("../assets/fonts/NetflixSans-Medium.woff2") format("woff"),
+    url("../assets/fonts/NetflixSans-Medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  background-color: rgb(2, 2, 2);
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
