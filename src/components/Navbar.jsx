@@ -7,25 +7,33 @@ const Navbar = () => {
 
   const [value, setValue] = useState("Get Started");
   const [href, setHref] = useState("");
+  const [home, setHome] = useState(false);
 
   useEffect(() => {
     if (location.pathname === "/login") {
       setValue("Sign Up");
-      setHref("/signup")
+      setHref("/signup");
     }
-    if ((location.pathname === "/home") || location.pathname.includes("/home")) {
-      setValue("Sign Out");
+    if (location.pathname === "/home" || location.pathname.includes("/home")) {
+      setHome(true);
     }
-    if ((location.pathname === "/" || location.pathname === "/signup")) {
+    if (location.pathname === "/" || location.pathname === "/signup") {
       setValue("Sign In");
-      setHref("/login")
+      setHref("/login");
     }
   }, [location.pathname]);
 
   return (
     <div className="navbar">
-      <div className="brand"><Link to='/'> NETFLIX </Link></div>
-      <div className="action_button"><Link to={href}>{value}</Link></div>
+      <div className="brand">
+        <Link to="/"> NETFLIX </Link>
+      </div>
+      {!home && (
+        <div className="action_button">
+          <Link to={href}>{value}</Link>
+        </div>
+      )}
+      {home && (<>home</>)}
     </div>
   );
 };

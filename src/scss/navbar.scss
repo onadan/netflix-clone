@@ -1,6 +1,8 @@
 @import "./variables.scss";
 
  .navbar {
+  position: fixed;
+  width: 100%;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -13,6 +15,7 @@
     color: $primary;
     font-weight: 700;
     font-size: 2.3rem;
+    cursor: pointer;
   }
   .action_button {
     padding: .5rem 1rem;
