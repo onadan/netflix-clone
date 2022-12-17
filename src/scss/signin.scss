@@ -1,11 +1,13 @@
 @import "variables";
 
 .login_wrapper {
+  
   display: flex;
   justify-content: center;
   color: white;
   margin: 1rem 0;
   .container {
+    margin-top: 100px;
     background-color: rgba(0, 0, 0, 0.6);
     max-width: 600px;
     width: 100%;
